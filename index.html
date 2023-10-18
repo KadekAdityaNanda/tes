@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lirik Lagu </title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #f1cd00e3;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .lyrics-container {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        .summary {
+            font-style: italic;
+            font-size: 16px;
+        }
+        .lyrics {
+            font-size: 18px;
+            line-height: 1.5;
+            text-align: left;
+        }
+        audio {
+            width: 100%;
+        }
+        .highlight {
+            display: inline;
+            position: relative;
+            border-radius: 30%; /* Latar belakang bulat */
+        }
+        .highlight:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 0;
+            height: 100%;
+            background-color: rgba(0, 255, 191, 0.301);
+            opacity: 0;
+            transition: width 0.5s, opacity 0.5s;
+        }
+        .highlight.active:before {
+            width: 100%;
+            opacity: 1;
+        }
+        .music-player {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body >
+    <div class="lyrics-container">
+        <h3> Song Title: a year ago</h3>
+        <h3>Singer: James Arthur</h3>
+        <p class="summary">Program java, song lyrics by kadek </p>
+        
+        <div class="lyrics">
+            <audio controls class="music-player">
+                <source src="ay.mpga" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+            <p>
+                <span class="highlight">And now I'm just somebody you forgot</span> 
+            </p>
+            <p>
+                <span class="highlight">I hope you're well</span> 
+            </p>
+            <p>
+                <span class="highlight">Oh, and I can't help myself, oh, oh</span> 
+            </p>
+            <p>
+                <span class="highlight">I wish it was a year ago</span> 
+            </p>
+            <p>
+                <span class="highlight">I wish that I could hold you close</span> 
+            </p>
+            <p>
+                <span class="highlight">Now I'm driving past your house</span> 
+            </p>
+            <p>
+                <span class="highlight">I know the lights are on, you're not alone</span> 
+            </p>
+            <p>
+                <span class="highlight">I wonder if you're making lies</span> 
+            </p>
+            <p>
+                <span class="highlight">I wonder if he loves you like</span> 
+            </p>
+            <p>
+                <span class="highlight">The way you said that only I could do</span> 
+            </p>
+            <p>
+                <span class="highlight">I wish that I could tell you that I miss you</span>
+            </p>
+            <p>
+                <span class="highlight">I wish that I could tell you that I miss you</span> 
+            </p>
+            <p>
+                <span class="highlight">I wish it was a year ago</span>
+            </p>
+            <p>
+                <span class="highlight">I wish that I could hold you close</span> 
+            </p>
+            <p>
+                <span class="highlight">The way you said that only I could do</span> 
+            </p>
+            <p>
+                <span class="highlight">I wish that I could tell you that I miss you</span> 
+            </p>
+            
+        </div>
+    </div>
+    
+    <script>
+        // JavaScript untuk mengatur penandaan lirik
+        const audio = document.querySelector('audio');
+        const highlights = document.querySelectorAll('.highlight');
+
+        audio.addEventListener('timeupdate', function () {
+            const currentTime = Math.floor(audio.currentTime);
+
+            // Hapus penandaan dari semua elemen .highlight
+            highlights.forEach(function(highlight) {
+                highlight.classList.remove('active');
+            });
+
+            // Tambahkan penandaan ke elemen .highlight yang sesuai dengan waktu
+            if (currentTime >= 0 && currentTime < 3) {
+                highlights[0].classList.add('active');
+            } else if (currentTime >= 3 && currentTime < 9) {
+                highlights[1].classList. add('active');
+            } else if (currentTime >= 9 && currentTime < 17) {
+                highlights[2].classList.add('active');
+            } else if (currentTime >= 17 && currentTime < 20) {
+                highlights[3].classList.add('active');
+            } else if (currentTime >= 20 && currentTime < 23) {
+                highlights[4].classList.add('active');
+            } else if (currentTime >= 23 && currentTime < 27) {
+                highlights[5].classList.add('active');
+            } else if (currentTime >= 27 && currentTime < 31) {
+                highlights[6].classList.add('active');
+            } else if (currentTime >= 31 && currentTime < 34) {
+                highlights[7].classList.add('active');
+            } else if (currentTime >= 34 && currentTime < 37) {
+                highlights[8].classList.add('active');
+            } else if (currentTime >= 37&& currentTime < 42) {
+                highlights[9].classList.add('active');
+            } else if (currentTime >= 42 && currentTime < 49) {
+                highlights[10].classList.add('active');
+            } else if (currentTime >= 49 && currentTime < 58) {
+                highlights[11].classList.add('active');
+            } else if (currentTime >= 58 && currentTime < 63) {
+                highlights[12].classList.add('active');
+            } else if (currentTime >= 63 && currentTime < 65) {
+                highlights[13].classList.add('active');
+            } else if (currentTime >= 65 && currentTime < 71) {
+                highlights[14].classList.add('active');
+            } else if (currentTime >= 70 && currentTime < 75) {
+                highlights[15].classList.add('active');
+            } else if (currentTime >= 96 && currentTime < 101) {
+                highlights[16].classList.add('active');
+            } else if (currentTime >= 101 && currentTime < 107) {
+                highlights[17].classList.add('active');
+            } else if (currentTime >= 107 && currentTime < 122) {
+                highlights[18].classList.add('active');
+            } else if (currentTime >= 122 && currentTime < 122) {
+                highlights[19].classList.add('active');
+                
+            }
+            // Lanjutkan pola ini untuk setiap baris lirik
+        });
+    </script>
+</body>
+</html>
